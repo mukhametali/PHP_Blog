@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
-        <title>Home - My Blog</title>
+        <title>Home - <?= APP_NAME ?></title>
 
         <!-- Bootstrap core CSS -->
         <link href="<?= ROOT ?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
