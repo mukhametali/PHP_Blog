@@ -75,7 +75,7 @@
         }
     </style>
 
-    <header class="p-3 mb-3 border-bottom">
+    <header class="p-3 border-bottom">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
@@ -109,8 +109,35 @@
         </div>
     </header>
 
+    <!-- slider    -->
+    <link rel="stylesheet" href="assets/slider/ism/css/my-slider.css"/>
+    <script src="assets/slider/ism/js/ism-2.2.min.js"></script>
+
+    <div class="ism-slider" data-transition_type="fade" data-play_type="loop" id="my-slider">
+        <ol>
+            <li>
+                <img src="assets/slider/ism/image/slides/flower-729514_1280.jpg">
+                <div class="assets/slider/ism-caption assets/slider/ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="assets/slider/ism/image/slides/beautiful-701678_1280.jpg">
+                <div class="assets/slider/ism-caption assets/slider/ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="assets/slider/ism/image/slides/summer-192179_1280.jpg">
+                <div class="assets/slider/ism-caption assets/slider/ism-caption-0">My slide caption text</div>
+            </li>
+            <li>
+                <img src="assets/slider/ism/image/slides/city-690332_1280.jpg">
+                <div class="assets/slider/ism-caption assets/slider/ism-caption-0">My slide caption text</div>
+            </li>
+        </ol>
+    </div>
+    <!-- END slider -->
+
+
     <main class="p-2">
-        <h1>My content</h1>
+        <h3 class="mx-4">Featured</h3>
     </main>
 
     <div class="container">
