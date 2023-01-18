@@ -9,7 +9,7 @@
     <title>Login - My Blog</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=ROOT?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -29,13 +29,15 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/signin.css" rel="stylesheet">
+    <link href="<?=ROOT?>/assets/css/signin.css" rel="stylesheet">
 </head>
 <body class="text-center">
 
-<main class="form-signin">
+<main class="form-signin w-100 m-auto">
     <form method="post">
-        <img class="mb-4 rounded-circle shadow" src="assets/images/logo.jpg" alt="" width="92" height="92" style="object-fit: cover">
+        <a href="home">
+            <img class="mb-4 rounded-circle shadow" src="<?=ROOT?>/assets/images/logo.jpg" alt="" width="92" height="92" style="object-fit: cover">
+        </a>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
         <div class="form-floating">
@@ -47,7 +49,7 @@
             <label for="floatingPassword">Password</label>
         </div>
 
-        <div class="my-2">Don't have account? <a href="signup.php">Signup here</a></div>
+        <div class="my-2">Don't have account? <a href="<?=ROOT?>/signup">Signup here</a></div>
         <div class="checkbox mb-3">
             <label>
                 <input name="remember" type="checkbox" value="1"> Remember me

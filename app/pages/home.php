@@ -7,12 +7,12 @@
         <title>Home - My Blog</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?= ROOT ?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Custom styles for this template -->
-        <link href="assets/css/headers.css" rel="stylesheet">
-    </head>
-    <body>
+
+
+
+
 
         <style>
             .bi {
@@ -20,7 +20,6 @@
             fill: currentColor;
             }
         </style>
-        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
         <style>
             .bd-placeholder-img {
@@ -75,11 +74,16 @@
             }
         </style>
 
+    <!-- Custom styles for this template -->
+        <link href="<?= ROOT ?>/assets/css/header.css">
+    </head>
+    <body>
+
         <header class="p-3 border-bottom">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                     <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-                        <img class="bi me-2 rounded-circle" src="assets/images/logo.jpg"  width="60" height="52" style="object-fit: cover;">
+                        <img class="bi me-2 rounded-circle" src="<?=ROOT?>/assets/images/logo.jpg"  width="60" height="52" style="object-fit: cover;">
                     </a>
 
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -109,26 +113,26 @@
         </header>
 
         <!-- slider    -->
-        <link rel="stylesheet" href="assets/slider/ism/css/my-slider.css"/>
-        <script src="assets/slider/ism/js/ism-2.2.min.js"></script>
+        <link rel="stylesheet" href="<?=ROOT?>/assets/slider/ism/css/my-slider.css"/>
+        <script src="<?=ROOT?>/assets/slider/ism/js/ism-2.2.min.js"></script>
 
         <div class="ism-slider" data-transition_type="fade" data-play_type="loop" id="my-slider">
             <ol>
                 <li>
-                    <img src="assets/slider/ism/image/slides/flower-729514_1280.jpg">
-                    <div class="assets/slider/ism-caption assets/slider/ism-caption-0">My slide caption text</div>
+                    <img src="<?=ROOT?>/assets/slider/ism/image/slides/flower-729514_1280.jpg">
+                    <div class="<?=ROOT?>/assets/slider/ism-caption <?=ROOT?>/assets/slider/ism-caption-0">My slide caption text</div>
                 </li>
                 <li>
-                    <img src="assets/slider/ism/image/slides/beautiful-701678_1280.jpg">
-                    <div class="assets/slider/ism-caption assets/slider/ism-caption-0">My slide caption text</div>
+                    <img src="<?=ROOT?>/assets/slider/ism/image/slides/beautiful-701678_1280.jpg">
+                    <div class="<?=ROOT?>/assets/slider/ism-caption <?=ROOT?>/assets/slider/ism-caption-0">My slide caption text</div>
                 </li>
                 <li>
-                    <img src="assets/slider/ism/image/slides/summer-192179_1280.jpg">
-                    <div class="assets/slider/ism-caption assets/slider/ism-caption-0">My slide caption text</div>
+                    <img src="<?=ROOT?>/assets/slider/ism/image/slides/summer-192179_1280.jpg">
+                    <div class="<?=ROOT?>/assets/slider/ism-caption <?=ROOT?>/assets/slider/ism-caption-0">My slide caption text</div>
                 </li>
                 <li>
-                    <img src="assets/slider/ism/image/slides/city-690332_1280.jpg">
-                    <div class="assets/slider/ism-caption assets/slider/ism-caption-0">My slide caption text</div>
+                    <img src="<?=ROOT?>/assets/slider/ism/image/slides/city-690332_1280.jpg">
+                    <div class="<?=ROOT?>/assets/slider/ism-caption <?=ROOT?>/assets/slider/ism-caption-0">My slide caption text</div>
                 </li>
             </ol>
         </div>
@@ -150,7 +154,7 @@
                             <a href="#" class="stretched-link">Continue reading</a>
                         </div>
                         <div class="col-lg-5 col-12 d-lg-block">
-                            <img class="bd-placeholder-img w-100" width="200" height="250" style="object-fit: cover" src="assets/images/3.jpg">
+                            <img class="bd-placeholder-img w-100" width="200" height="250" style="object-fit: cover" src="<?=ROOT?>/assets/images/3.jpg">
                         </div>
                     </div>
                 </div>
@@ -165,7 +169,7 @@
                             <a href="#" class="stretched-link">Continue reading</a>
                         </div>
                         <div class="col-lg-5 col-12 d-lg-block">
-                            <img class="bd-placeholder-img w-100" height="250" style="object-fit: cover" src="assets/images/4.jpg">
+                            <img class="bd-placeholder-img w-100" height="250" style="object-fit: cover" src="<?=ROOT?>/assets/images/4.jpg">
                         </div>
                     </div>
                 </div>
@@ -180,7 +184,7 @@
                             <a href="#" class="stretched-link">Continue reading</a>
                         </div>
                         <div class="col-lg-5 col-12 d-lg-block">
-                            <img class="bd-placeholder-img w-100" height="250" style="object-fit: cover" src="assets/images/4.jpg">
+                            <img class="bd-placeholder-img w-100" height="250" style="object-fit: cover" src="<?=ROOT?>/assets/images/4.jpg">
                         </div>
                     </div>
                 </div>
@@ -193,10 +197,10 @@
             <footer class="py-5">
                 <div class="row">
                     <div class="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
+                        <h5>Useful Links</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="<?=ROOT?>/login" class="nav-link p-0 text-muted">Login</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
@@ -249,7 +253,7 @@
         </div>
 
 
-        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="<?=ROOT?>/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>
