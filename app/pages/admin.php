@@ -40,7 +40,7 @@
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-            <a class="nav-link px-3" href="#">Sign out</a>
+            <a class="nav-link px-3" href="<?=ROOT?>/logout">Sign out</a>
         </div>
     </div>
 </header>
@@ -51,7 +51,7 @@
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
+                        <a class="nav-link active" aria-current="page" href="<?=ROOT?>/admin">
                            <i class="bi bi-speedometer"></i>
                             Dashboard
                         </a>
@@ -66,7 +66,7 @@
                 </h6>
                 <ul class="nav flex-column mb-2">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="<?=ROOT?>">
                             <i class="bi bi-house"></i>
                             Front end
                         </a>

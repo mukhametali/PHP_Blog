@@ -60,7 +60,7 @@ if (!empty($_POST))
             $data['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
             $query = "insert into users (username,email,password,role) values (:username,:email,:password,:role)";
-           
+
             query($query, $data);
 
             redirect('login');
