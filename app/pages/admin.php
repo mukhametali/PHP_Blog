@@ -1,3 +1,36 @@
+<?php
+
+    if(!logged_in())
+    {
+        redirect('login');
+    }
+
+
+        $section = $url[1] ?? 'dashboard';
+        $action  = $url[2] ?? 'view';
+        $id      = $url[3] ?? 0;
+
+        $filename = "../app/pages/admin/".$section.".php";
+    if (!file_exists($filename))
+    {
+        $filename = "../app/pages/admin/404.php";
+    }
+
+    if ($section == 'users')
+    {
+        require_once "../app/pages/admin/users-controller.php";
+    }else
+    if ($section == 'categories')
+    {
+        require_once "../app/pages/admin/categories-controller.php";
+    }else
+    if ($section == 'posts')
+    {
+        require_once "../app/pages/admin/posts-controller.php";
+    }
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,6 +57,7 @@
                 font-size: 3.5rem;
             }
         }
+
     </style>
 
 
@@ -114,15 +148,7 @@
 
 
             <?php
-                $section = $url[1] ?? 'dashboard';
-
-                $filename = "../app/pages/admin/".$section.".php";
-                if (file_exists($filename))
-                {
                     require_once $filename;
-                }else{
-                    require_once "../app/pages/admin/404.php";
-                }
             ?>
         </main>
     </div>
