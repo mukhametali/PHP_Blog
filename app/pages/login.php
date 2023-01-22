@@ -1,16 +1,15 @@
 <?php
 
-if (!empty($_POST))
+if(!empty($_POST))
 {
     //validate
     $errors = [];
 
     $query = "select * from users where email = :email limit 1";
-    $row = query($query, ['email' =>$_POST['email']]);
+    $row = query($query, ['email'=>$_POST['email']]);
 
-    if ($row)
+    if($row)
     {
-        //check passwd
         $data = [];
         if(password_verify($_POST['password'], $row[0]['password']))
         {
@@ -19,14 +18,13 @@ if (!empty($_POST))
             redirect('admin');
 
         }else{
-            $errors['email'] = "Wrong email or password";
+            $errors['email'] = "wrong email or password";
         }
 
     }else{
-        $errors['email'] = "Wrong email or password";
+        $errors['email'] = "wrong email or password";
     }
 }
-
 ?>
 
 <!doctype html>
@@ -35,11 +33,8 @@ if (!empty($_POST))
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Login - <?= APP_NAME ?></title>
+    <title>Login - <?=APP_NAME?></title>
 
-    <!-- Bootstrap core CSS -->
     <link href="<?=ROOT?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -56,6 +51,43 @@ if (!empty($_POST))
                 font-size: 3.5rem;
             }
         }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
     </style>
 
 
@@ -67,10 +99,11 @@ if (!empty($_POST))
 <main class="form-signin w-100 m-auto">
     <form method="post">
         <a href="home">
-            <img class="mb-4 rounded-circle shadow" src="<?=ROOT?>/assets/images/logo.jpg" alt="" width="92" height="92" style="object-fit: cover">
+            <img class="mb-4 rounded-circle shadow" src="<?=ROOT?>/assets/images/logo.jpg" alt="" width="92" height="92" style="object-fit: cover;">
         </a>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-        <?php if(!empty($errors['email'])):?>
+
+        <?php if (!empty($errors['email'])):?>
             <div class="alert alert-danger"><?=$errors['email']?></div>
         <?php endif;?>
 
@@ -83,7 +116,7 @@ if (!empty($_POST))
             <label for="floatingPassword">Password</label>
         </div>
 
-        <div class="my-2">Don't have account? <a href="<?=ROOT?>/signup">Signup here</a></div>
+        <div class="my-2">Dont have an account? <a href="<?=ROOT?>/signup">Signup here</a></div>
         <div class="checkbox mb-3">
             <label>
                 <input name="remember" type="checkbox" value="1"> Remember me
@@ -98,4 +131,3 @@ if (!empty($_POST))
 
 </body>
 </html>
-

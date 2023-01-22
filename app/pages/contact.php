@@ -1,5 +1,7 @@
 <?php include '../app/pages/includes/header.php'; ?>
 
-    <center class="alert alert-danger"><h1>Page not found</h1></center>
-
+<center>
+    <h4>Contact details:</h4>
+    Email: email@email.com
+</center>
 <?php include '../app/pages/includes/footer.php'; ?>
